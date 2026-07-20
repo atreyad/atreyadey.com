@@ -1,0 +1,88 @@
+---
+import PaperLinks from './PaperLinks.astro';
+
+/** A single research entry in a list (Research page and homepage). */
+interface Props {
+  entry: any; // CollectionEntry<'research'>
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { entry, headingLevel: Heading = 'h3' } = Astro.props;
+const { title, authors, status, version, tags, summary, abstract, awards } =
+  entry.data;
+const coauthors = authors.filter((a: any) => a.name !== 'Atreya Dey');
+---
+
+<article class="paper">
+  {
+    tags.length > 0 && (
+      <ul class="tags" aria-label="Research areas">
+        {tags.map((tag: string) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )
+  }
+  <Heading class="paper-title">
+    <a href={`/research/${entry.id}/`}>{title}</a>
+  </Heading>
+  <p class="meta">
+    {
+      coauthors.length > 0 && (
+        <>
+          with{' '}
+          {coauthors.map((a: any, i: number) => (
+            <>
+              {a.url ? <a href={a.url}>{a.name}</a> : a.name}
+              {i < coauthors.length - 1 ? ', ' : ''}
+            </>
+          ))}
+          {' · '}
+        </>
+      )
+    }
+    {status}{version && ` · ${version}`}
+  </p>
+  <p class="summary">{summary}</p>
+  {awards.map((award: string) => <p class="award">{award}</p>)}
+  <PaperLinks entry={entry} detailsLink={true} />
+  {
+    abstract && (
+      <details class="abstract">
+        <summary>Abstract</summary>
+        <p>{abstract}</p>
+      </details>
+    )
+  }
+</article>
+
+<style>
+  .paper {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .paper:last-child {
+    border-bottom: none;
+  }
+
+  .paper-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.3rem;
+  }
+
+  .paper-title a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .paper-title a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .summary {
+    margin: 0.5rem 0 0;
+  }
+</style>

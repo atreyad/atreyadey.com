@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PaperEntry from '../../components/PaperEntry.astro';
+
+const all = (await getCollection('research')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const workingPapers = all.filter((p) => p.data.status === 'Working paper');
+const inProgress = all.filter((p) => p.data.status === 'Work in progress');
+const other = all.filter(
+  (p) => !['Working paper', 'Work in progress'].includes(p.data.status)
+);
+---
+
+<Base
+  title="Research"
+  description="Working papers and research in progress on biodiversity finance, climate finance, asset pricing, and sovereign risk."
+  path="/research/"
+>
+  <div class="page-intro">
+    <h1>Research</h1>
+    <p class="meta">
+      Working papers and ongoing projects. Concise summaries are shown by
+      default; expand an entry for the full abstract.
+    </p>
+  </div>
+
+  <section class="section" aria-labelledby="wp-heading">
+    <h2 class="section-heading" id="wp-heading">Working papers</h2>
+    {workingPapers.map((entry) => <PaperEntry entry={entry} />)}
+  </section>
+
+  {
+    other.length > 0 && (
+      <section class="section" aria-labelledby="pub-heading">
+        <h2 class="section-heading" id="pub-heading">
+          Published and forthcoming
+        </h2>
+        {other.map((entry) => (
+          <PaperEntry entry={entry} />
+        ))}
+      </section>
+    )
+  }
+
+  {
+    inProgress.length > 0 && (
+      <section class="section" aria-labelledby="wip-heading">
+        <h2 class="section-heading" id="wip-heading">
+          Work in progress
+        </h2>
+        {inProgress.map((entry) => (
+          <PaperEntry entry={entry} />
+        ))}
+      </section>
+    )
+  }
+</Base>
+
+<style>
+  .page-intro {
+    padding: 2.5rem 0 1.5rem;
+  }
+</style>

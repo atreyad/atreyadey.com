@@ -1,0 +1,51 @@
+---
+import profile from '../data/profile.json';
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="inner">
+    <ul class="footer-links">
+      <li><a href={`mailto:${profile.email}`}>Email</a></li>
+      <li><a href={profile.cv.file}>CV</a></li>
+      <li><a href={profile.links.scholar}>Google Scholar</a></li>
+      <li><a href={profile.links.github}>GitHub</a></li>
+      <li><a href={profile.links.linkedin}>LinkedIn</a></li>
+      <li><a href={profile.links.institution}>University profile</a></li>
+    </ul>
+    <p class="colophon">
+      © {year} {profile.name} · Built with
+      <a href="https://astro.build/">Astro</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+  }
+
+  .inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.25rem;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+
+  .colophon {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+/** Renders the row of links (Paper · SSRN · Slides …) for a research entry. */
+interface Props {
+  entry: {
+    id: string;
+    data: {
+      links: {
+        paper?: string;
+        ssrn?: string;
+        slides?: string;
+        appendix?: string;
+        code?: string;
+        data?: string;
+      };
+      media: { label: string; url: string }[];
+      abstract?: string;
+    };
+  };
+  /** Include a "Details" link to the paper's own page. */
+  detailsLink?: boolean;
+}
+
+const { entry, detailsLink = false } = Astro.props;
+const { links, media } = entry.data;
+
+const items: { label: string; url: string }[] = [];
+if (links.paper) items.push({ label: 'Paper', url: links.paper });
+if (links.ssrn) items.push({ label: 'SSRN', url: links.ssrn });
+if (links.slides) items.push({ label: 'Slides', url: links.slides });
+if (links.appendix) items.push({ label: 'Appendix', url: links.appendix });
+if (links.code) items.push({ label: 'Code', url: links.code });
+if (links.data) items.push({ label: 'Data', url: links.data });
+for (const m of media) items.push({ label: m.label, url: m.url });
+---
+
+<ul class="link-row">
+  {
+    items.map((item) => (
+      <li>
+        <a href={item.url}>{item.label}</a>
+      </li>
+    ))
+  }
+  {
+    detailsLink && (
+      <li>
+        <a href={`/research/${entry.id}/`}>Details</a>
+      </li>
+    )
+  }
+</ul>

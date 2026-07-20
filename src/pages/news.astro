@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import NewsList from '../components/NewsList.astro';
+
+const news = (await getCollection('news')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const byYear = new Map<number, typeof news>();
+for (const item of news) {
+  const year = item.data.date.getFullYear();
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(item);
+}
+---
+
+<Base
+  title="News"
+  description="Awards, presentations, media, and paper updates."
+  path="/news/"
+>
+  <div class="page-intro">
+    <h1>News</h1>
+  </div>
+
+  {
+    [...byYear.entries()].map(([year, items]) => (
+      <section class="section" aria-labelledby={`year-${year}`}>
+        <h2 class="section-heading" id={`year-${year}`}>
+          {year}
+        </h2>
+        <NewsList items={items} />
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .page-intro {
+    padding: 2.5rem 0 1.5rem;
+  }
+</style>

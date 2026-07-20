@@ -1,0 +1,38 @@
+{
+  "name": "Atreya Dey",
+  "role": "Postdoctoral Research Associate",
+  "affiliations": [
+    {
+      "name": "Cambridge Judge Business School, University of Cambridge",
+      "url": "https://www.jbs.cam.ac.uk/people/atreya-dey/"
+    },
+    {
+      "name": "Cambridge Endowment for Research in Finance",
+      "url": "https://www.cerf.cam.ac.uk/"
+    },
+    {
+      "name": "Trinity Hall",
+      "url": "https://www.trinhall.cam.ac.uk/"
+    }
+  ],
+  "heroStatement": "I study how biodiversity loss and climate change affect firms, investors, and sovereign credit markets. My research combines financial data with ecological, geospatial, and satellite data.",
+  "bio": "I am a Postdoctoral Research Associate at Cambridge Judge Business School, affiliated with the Cambridge Endowment for Research in Finance and Trinity Hall. My research examines how biodiversity loss and changing climate patterns affect financial markets and corporate behaviour, using ecological, geospatial, and satellite data alongside standard financial data. I completed my PhD in Financial Technology at the University of Edinburgh in 2025 and was a visiting scholar at Columbia University. Before the PhD, I worked as an economist at Moody's Analytics, building stress-testing models for large U.S. and international banks.",
+  "email": "a.dey@jbs.cam.ac.uk",
+  "cv": {
+    "file": "/files/AtreyaDey_CV.pdf",
+    "updated": "July 2026"
+  },
+  "links": {
+    "scholar": "https://scholar.google.com/citations?hl=en&user=UDt1iNUAAAAJ",
+    "linkedin": "https://www.linkedin.com/in/atreya-dey/",
+    "github": "https://github.com/atreyadey",
+    "institution": "https://www.jbs.cam.ac.uk/people/atreya-dey/"
+  },
+  "researchInterests": [
+    "Biodiversity finance",
+    "Climate finance",
+    "Empirical asset pricing",
+    "Corporate finance",
+    "Sovereign risk"
+  ]
+}

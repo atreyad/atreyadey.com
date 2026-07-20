@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import profile from '../data/profile.json';
+---
+
+<Base
+  title="Contact"
+  description={`Contact details and professional profiles for ${profile.name}.`}
+  path="/contact/"
+>
+  <div class="page-intro">
+    <h1>Contact</h1>
+  </div>
+
+  <section class="section">
+    <dl class="contact-list">
+      <dt>Email</dt>
+      <dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd>
+
+      <dt>Affiliation</dt>
+      <dd>
+        Cambridge Judge Business School, University of Cambridge<br />
+        Cambridge Endowment for Research in Finance · Trinity Hall
+      </dd>
+
+      <dt>Profiles</dt>
+      <dd>
+        <ul class="link-row">
+          <li><a href={profile.links.institution}>University profile</a></li>
+          <li><a href={profile.links.scholar}>Google Scholar</a></li>
+          <li><a href={profile.links.linkedin}>LinkedIn</a></li>
+          <li><a href={profile.links.github}>GitHub</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <p class="meta">
+      The quickest way to reach me is by email. I am happy to share paper
+      drafts and slides on request.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .page-intro {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .contact-list dt {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 1.1rem;
+  }
+
+  .contact-list dd {
+    margin: 0.2rem 0 0;
+  }
+
+  .section .meta {
+    margin-top: 2rem;
+  }
+</style>
