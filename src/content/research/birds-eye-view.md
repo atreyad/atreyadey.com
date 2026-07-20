@@ -30,6 +30,10 @@ abstract: >-
   biodiversity footprints provide less voluntary biodiversity information.
 links:
   paper: /files/Dey_BirdsEyeView.pdf
+awards:
+  - >-
+    Best PhD Paper Award, Global Research Alliance for Sustainable Finance and
+    Investment 2025 (for an earlier version)
 presentations:
   - Cambridge Judge Business School Brown Bag Seminar
   - International Symposium on Climate, Finance, and Sustainability, 2026
@@ -62,3 +66,9 @@ initially interpret as operational decline. Forecast errors correct around
 earnings announcements, producing abnormal returns among small- and mid-cap
 firms. Despite facility locations being public information, high-footprint
 firms disclose less voluntary biodiversity information.
+
+An earlier version of this work circulated as
+["Firm operations, biodiversity loss, and corporate
+disclosure"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5147761),
+which received the Best PhD Paper Award at the Global Research Alliance for
+Sustainable Finance and Investment (GRASFI) 2025.

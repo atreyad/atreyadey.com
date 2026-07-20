@@ -47,13 +47,13 @@ sources were ambiguous, or where a decision is yours to make.
    - AFA poster — early January 2025 (AFA San Francisco meetings).
    - PRI award — October 2024 (conference ran 7–10 Oct 2024, Toronto).
    - PRI interview — dated October 2024; confirm when it was recorded.
-8. **Bird's-eye view presentations list** comes from the paper's
-   acknowledgments (JBS Brown Bag; International Symposium on Climate,
-   Finance, and Sustainability 2026; EDHEC workshop 2026; Lancaster financial
-   fraud conference 2026; GRASFI 2025; SIII 2025). The CV attributes GRASFI
-   2025 and SIII 2025 to the earlier "Firm operations" paper — if those
-   venues saw the earlier paper rather than this one, trim the list in
-   `src/content/research/birds-eye-view.md`.
+8. **"Firm operations, biodiversity loss, and corporate disclosure" has
+   merged into the bird paper** (confirmed by Atreya, 20 Jul 2026). The
+   standalone entry was removed; the GRASFI 2025 award and the old SSRN link
+   (5147761) now appear on the bird paper's page as "earlier version". If
+   SSRN ever hosts the new version under the same id, update the link. The
+   bird paper's presentations list combines both papers' venues per the
+   draft's acknowledgments and the CV.
 9. **JFQA/Baruch Climate Finance Conference poster** is listed under Rising
    Seas presentations as "(poster, to be presented)" per the CV — update once
    presented, and consider a news item with the date.
