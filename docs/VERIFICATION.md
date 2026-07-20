@@ -21,15 +21,13 @@ sources were ambiguous, or where a decision is yours to make.
 
 ## Facts to verify
 
-5. **Volatile Temperatures SSRN link.** Your CV links SSRN id **4023755**;
-   your current website's research page links id **5042936** (and Google
-   Scholar lists a 2024 CESifo working-paper version). The site currently
-   uses the CV's link (4023755). Confirm which is the canonical version.
-6. **Wildfires / manager selection project.** Listed as "Work in progress"
-   with a placeholder title ("Wildfires and institutional manager
-   selection") and a summary based on the Baillie Gifford placement
-   description in your CV. Confirm the working title, any coauthors, and the
-   description — or hide it by setting `selected: false` / deleting the file.
+5. ~~Volatile Temperatures SSRN link~~ **Resolved (20 Jul 2026):** Atreya
+   confirmed https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4023755,
+   which is what the site uses.
+6. ~~Wildfires / manager selection project~~ **Resolved (20 Jul 2026): not
+   shown on the site yet** per Atreya. The entry was removed; recreate
+   `src/content/research/wildfires-manager-selection.md` when the project is
+   ready to announce.
 7. **Approximate news dates** (files marked `approximate: true` show only
    month + year on the site):
    - CERF 25th Anniversary Conference presentation — dated June 2026 from the
