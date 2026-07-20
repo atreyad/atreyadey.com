@@ -45,15 +45,15 @@ const personSchema = {
     slot="head"
   />
 
-  <!-- Hero -->
-  <section class="hero" aria-label="Introduction">
+  <!-- Hero / About -->
+  <section class="hero" aria-label="About me" id="about">
     <div class="hero-text">
       <h1>{profile.name}</h1>
       <p class="hero-role">
         {profile.role},
         <a href={profile.affiliations[0].url}>Cambridge Judge Business School</a>
       </p>
-      <p class="hero-statement">{profile.heroStatement}</p>
+      <p class="hero-statement">{profile.bio}</p>
       <div class="hero-links">
         <a class="button button--solid" href="/research/">Research</a>
         <a class="button" href={profile.cv.file}>CV</a>
@@ -133,14 +133,6 @@ const personSchema = {
     <p class="more-link"><a href="/news/">All news →</a></p>
   </section>
 
-  <!-- About -->
-  <section class="section" aria-labelledby="about-heading" id="about">
-    <h2 class="section-heading" id="about-heading">About</h2>
-    <p>{profile.bio}</p>
-    <p class="meta">
-      A full academic history is in my <a href={profile.cv.file}>CV (PDF)</a>.
-    </p>
-  </section>
 </Base>
 
 <style>

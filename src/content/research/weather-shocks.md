@@ -48,14 +48,15 @@ presentations:
   - Institute for Quantitative Investment Research
   - European Economic Association
   - Frontiers of Factor Investing
-image: ../../assets/temperature-variability-map.png
+image: ../../assets/longshort-returns.png
 imageAlt: >-
-  Heat map of U.S. states coloured by temperature-anomaly variability in
-  September 2015, ranging from red (low) in the Upper Midwest, Ohio, and the
-  Northeast to yellow (high) in Texas and the Southwest.
+  Line chart of cumulative abnormal returns from 1993 to 2020 for long-short
+  portfolios sorted on abnormal temperature variability. Both the quintile
+  and quartile sorts climb steadily to roughly 125 log points by the late
+  2010s.
 imageCaption: >-
-  State-level variability in temperature anomalies, September 2015. From an
-  earlier draft of the paper.
+  Cumulative abnormal returns of long-short portfolios sorted on exposure to
+  abnormal temperature variability, 1993–2020.
 ---
 
 Average warming is only part of how climate change touches the economy:

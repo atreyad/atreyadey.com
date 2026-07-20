@@ -3,7 +3,7 @@ title: "A bird's-eye view: firm biodiversity footprints and earnings expectation
 authors:
   - name: Atreya Dey
 status: Working paper
-version: "Draft: July 2026"
+version: "Job market paper · Draft: July 2026"
 featured: true
 order: 1
 tags:

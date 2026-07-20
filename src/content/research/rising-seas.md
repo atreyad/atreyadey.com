@@ -55,7 +55,7 @@ imageCaption: >-
   across sovereigns. Figure 3 of the paper.
 ---
 
-My job market paper. Coastal flooding driven by sea-level rise is among the
+Coastal flooding driven by sea-level rise is among the
 most predictable consequences of climate change, yet whether sovereign debt
 markets price it is an open question. Using granular elevation and population
 data to measure each country's exposed population, I show that credit default
