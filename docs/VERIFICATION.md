@@ -13,10 +13,8 @@ sources were ambiguous, or where a decision is yours to make.
    `src/content/research/birds-eye-view.md`.
 2. ~~CERF 2026 slides~~ **Resolved (20 Jul 2026): not included.** Removed
    from the site and git history.
-3. **CV hosting — awaiting Dropbox link from Atreya.** The CV is currently
-   self-hosted at `/files/AtreyaDey_CV.pdf`; once the Dropbox link is
-   provided, set it as `cv.file` in `src/data/profile.json` and delete the
-   local PDF.
+3. ~~CV hosting~~ **Resolved (20 Jul 2026):** CV links to Atreya's Dropbox
+   (set in `src/data/profile.json`); the local copy was removed.
 4. ~~Twitter/X~~ **Resolved (20 Jul 2026): not linked.**
 
 ## Facts to verify

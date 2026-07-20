@@ -64,8 +64,11 @@ appear on `/news/` grouped by year.
 
 ### Update the CV
 
-Replace `public/files/AtreyaDey_CV.pdf` with the new PDF (keep the same file
-name), and update the `cv.updated` date in `src/data/profile.json`.
+The CV links point to a Dropbox file, set as `cv.file` in
+`src/data/profile.json`. Replace the PDF in Dropbox without changing the
+share link (upload a new version of the same file), and update the
+`cv.updated` date in `profile.json`. If the share link ever changes, paste
+the new URL into `cv.file`.
 
 ### Change homepage text, bio, links, email
 
