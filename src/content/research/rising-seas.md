@@ -3,6 +3,7 @@ title: "Inattention to the coming storm? Rising seas and sovereign credit risk"
 authors:
   - name: Atreya Dey
 status: Working paper
+version: "Last revised: February 2025"
 order: 2
 tags:
   - Climate Finance
