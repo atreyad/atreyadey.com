@@ -34,6 +34,8 @@ awards:
     Best PhD Paper Award, Global Research Alliance for Sustainable Finance and
     Investment 2025 (for an earlier version)
 presentations:
+  - NBER Climate Finance Conference, 2026 (upcoming)
+  - Aarhus Finance Forum, 2026 (upcoming)
   - Cambridge Judge Business School Brown Bag Seminar
   - International Symposium on Climate, Finance, and Sustainability, 2026
   - 3rd Workshop on Recent Trends and New Developments in Sustainable, Green & International Finance (EDHEC), 2026
