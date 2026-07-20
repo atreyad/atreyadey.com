@@ -31,6 +31,13 @@ awards:
   - Best PhD Paper Award, Global Research Alliance for Sustainable Finance and Investment 2025
 presentations:
   - The Sustainable and Impact Investments International Conference, 2025
+image: ../../assets/protected-areas-map.png
+imageAlt: >-
+  Map of the contiguous United States showing protected areas from the World
+  Database on Protected Areas as dense dark clusters across the country.
+imageCaption: >-
+  Protected areas in the contiguous United States, from the World Database on
+  Protected Areas. Figure 3 of the paper.
 ---
 
 This paper asks whether anyone — investors or regulators — disciplines the

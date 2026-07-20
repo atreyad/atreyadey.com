@@ -79,21 +79,6 @@ const personSchema = {
           Featured research
         </h2>
         <article class="featured">
-          {featured.data.image && (
-            <figure>
-              <a href={`/research/${featured.id}/`}>
-                <Image
-                  src={featured.data.image}
-                  alt={featured.data.imageAlt ?? ''}
-                  width={1400}
-                  loading="eager"
-                />
-              </a>
-              {featured.data.imageCaption && (
-                <figcaption>{featured.data.imageCaption}</figcaption>
-              )}
-            </figure>
-          )}
           <div class="featured-body">
             <h3 class="featured-title">
               <a href={`/research/${featured.id}/`}>{featured.data.title}</a>
@@ -114,6 +99,21 @@ const personSchema = {
               </details>
             )}
           </div>
+          {featured.data.image && (
+            <figure class="featured-figure">
+              <a href={`/research/${featured.id}/`}>
+                <Image
+                  src={featured.data.image}
+                  alt={featured.data.imageAlt ?? ''}
+                  width={900}
+                  loading="eager"
+                />
+              </a>
+              {featured.data.imageCaption && (
+                <figcaption>{featured.data.imageCaption}</figcaption>
+              )}
+            </figure>
+          )}
         </article>
       </section>
     )
@@ -189,33 +189,43 @@ const personSchema = {
   }
 
   .featured {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 38%;
+    gap: 1.5rem;
+    align-items: start;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: #fff;
-    overflow: hidden;
+    padding: 1.4rem 1.5rem 1.6rem;
   }
 
-  .featured figure {
-    margin: 0;
-    background: #fff;
-    border-bottom: 1px solid var(--border);
+  .featured-figure {
+    margin: 0.35rem 0 0;
+    min-width: 0;
   }
 
-  .featured figure img {
+  .featured-figure img {
     display: block;
     width: 100%;
     height: auto;
-    padding: 1.25rem 1.25rem 0.5rem;
   }
 
-  .featured figcaption {
-    font-size: 0.82rem;
+  .featured-figure figcaption {
+    font-size: 0.8rem;
     color: var(--muted);
-    padding: 0 1.25rem 1rem;
+    margin-top: 0.6rem;
+    line-height: 1.45;
   }
 
   .featured-body {
-    padding: 1.4rem 1.5rem 1.6rem;
+    min-width: 0;
+  }
+
+  @media (max-width: 48em) {
+    .featured {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
   }
 
   .featured-title {

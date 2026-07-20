@@ -47,6 +47,14 @@ presentations:
   - Institute for Quantitative Investment Research
   - European Economic Association
   - Frontiers of Factor Investing
+image: ../../assets/temperature-variability-map.png
+imageAlt: >-
+  Heat map of U.S. states coloured by temperature-anomaly variability in
+  September 2015, ranging from red (low) in the Upper Midwest, Ohio, and the
+  Northeast to yellow (high) in Texas and the Southwest.
+imageCaption: >-
+  State-level variability in temperature anomalies, September 2015. From
+  Figure 9 of the paper.
 ---
 
 Average warming is only part of how climate change touches the economy:

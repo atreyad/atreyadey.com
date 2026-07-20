@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import PaperLinks from './PaperLinks.astro';
 
 /** A single research entry in a list (Research page and homepage). */
@@ -13,45 +14,64 @@ const { title, authors, status, version, tags, summary, abstract, awards } =
 const coauthors = authors.filter((a: any) => a.name !== 'Atreya Dey');
 ---
 
-<article class="paper">
-  {
-    tags.length > 0 && (
-      <ul class="tags" aria-label="Research areas">
-        {tags.map((tag: string) => (
-          <li>{tag}</li>
-        ))}
-      </ul>
-    )
-  }
-  <Heading class="paper-title">
-    <a href={`/research/${entry.id}/`}>{title}</a>
-  </Heading>
-  <p class="meta">
+<article class:list={['paper', { 'has-image': !!entry.data.image }]}>
+  <div class="paper-main">
     {
-      coauthors.length > 0 && (
-        <>
-          with{' '}
-          {coauthors.map((a: any, i: number) => (
-            <>
-              {a.url ? <a href={a.url}>{a.name}</a> : a.name}
-              {i < coauthors.length - 1 ? ', ' : ''}
-            </>
+      tags.length > 0 && (
+        <ul class="tags" aria-label="Research areas">
+          {tags.map((tag: string) => (
+            <li>{tag}</li>
           ))}
-          {' · '}
-        </>
+        </ul>
       )
     }
-    {status}{version && ` · ${version}`}
-  </p>
-  <p class="summary">{summary}</p>
-  {awards.map((award: string) => <p class="award">{award}</p>)}
-  <PaperLinks entry={entry} detailsLink={true} />
+    <Heading class="paper-title">
+      <a href={`/research/${entry.id}/`}>{title}</a>
+    </Heading>
+    <p class="meta">
+      {
+        coauthors.length > 0 && (
+          <>
+            with{' '}
+            {coauthors.map((a: any, i: number) => (
+              <>
+                {a.url ? <a href={a.url}>{a.name}</a> : a.name}
+                {i < coauthors.length - 1 ? ', ' : ''}
+              </>
+            ))}
+            {' · '}
+          </>
+        )
+      }
+      {status}{version && ` · ${version}`}
+    </p>
+    <p class="summary">{summary}</p>
+    {awards.map((award: string) => <p class="award">{award}</p>)}
+    <PaperLinks entry={entry} detailsLink={true} />
+    {
+      abstract && (
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>{abstract}</p>
+        </details>
+      )
+    }
+  </div>
   {
-    abstract && (
-      <details class="abstract">
-        <summary>Abstract</summary>
-        <p>{abstract}</p>
-      </details>
+    entry.data.image && (
+      <a
+        class="paper-figure"
+        href={`/research/${entry.id}/`}
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <Image
+          src={entry.data.image}
+          alt=""
+          width={640}
+          loading="lazy"
+        />
+      </a>
     )
   }
 </article>
@@ -64,6 +84,40 @@ const coauthors = authors.filter((a: any) => a.name !== 'Atreya Dey');
 
   .paper:last-child {
     border-bottom: none;
+  }
+
+  .paper.has-image {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30%;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .paper-main {
+    min-width: 0;
+  }
+
+  .paper-figure {
+    display: block;
+    min-width: 0;
+  }
+
+  .paper-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 48em) {
+    .paper.has-image {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .paper-figure {
+      order: 2;
+      max-width: 24rem;
+    }
   }
 
   .paper-title {

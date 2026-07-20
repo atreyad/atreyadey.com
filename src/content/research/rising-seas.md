@@ -44,6 +44,15 @@ presentations:
   - Financial Stability Seminar, Bank of Portugal
   - International Banking, Economics, and Finance Association (ASSA meetings)
   - Global Research Alliance for Sustainable Finance and Investment
+image: ../../assets/rising-seas-hazard.png
+imageAlt: >-
+  Horizontal bar chart of fourteen sovereigns ranked by the trend in their
+  population's exposure to extreme sea-level hazard. Latvia, Thailand, Egypt,
+  China, Japan, and Vietnam show rising exposure; Norway, Uruguay, and
+  Denmark show declining exposure.
+imageCaption: >-
+  Trends in forecasted population exposure to 1-in-100-year coastal floods
+  across sovereigns. Figure 3 of the paper.
 ---
 
 My job market paper. Coastal flooding driven by sea-level rise is among the
