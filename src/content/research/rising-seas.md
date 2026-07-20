@@ -28,7 +28,6 @@ abstract: >-
   inaction or investment into adaptation.
 links:
   ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4058301
-  slides: /files/slides/Dey_RisingSeas_CERF2026_Slides.pdf
 awards:
   - Best PhD Paper Award, Principles for Responsible Investment Academic Conference 2024
 media:

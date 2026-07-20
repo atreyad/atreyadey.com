@@ -28,8 +28,7 @@ abstract: >-
   firms as operational decline, and their pessimism corrects when earnings are
   announced. Although firms' facility locations are public, firms with larger
   biodiversity footprints provide less voluntary biodiversity information.
-links:
-  paper: /files/Dey_BirdsEyeView.pdf
+links: {}
 awards:
   - >-
     Best PhD Paper Award, Global Research Alliance for Sustainable Finance and
@@ -52,6 +51,9 @@ imageCaption: >-
   locations of Toxics Release Inventory facilities in black. Figure 1 of the
   paper.
 ---
+
+The current draft is available on request — please
+[email me](mailto:a.dey@jbs.cam.ac.uk).
 
 This paper builds a standardized measure of firms' ecological impact — a
 biodiversity footprint index — from millions of citizen-science bird

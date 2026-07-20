@@ -6,25 +6,18 @@ sources were ambiguous, or where a decision is yours to make.
 
 ## Decisions to make
 
-1. **Bird's-eye view draft PDF is hosted on the site**
-   (`public/files/Dey_BirdsEyeView.pdf`, copied from
-   `PhD_Research/Biodiversity/Dey_BirdsEyeView.pdf`, dated 20 July 2026).
-   You said the paper will be on SSRN; until then the site links this local
-   PDF. If you don't want the draft public yet, delete the file and remove
-   the `paper:` link in `src/content/research/birds-eye-view.md` — the page
-   still works without it. When it's on SSRN, add
-   `ssrn: https://papers.ssrn.com/...` under `links:`.
-2. **CERF 2026 slides are hosted** for the Rising Seas paper
-   (`public/files/slides/Dey_RisingSeas_CERF2026_Slides.pdf`, from
-   `PhD_Research/Biodiversity/Dey_InattentionToTheComingStorm.pdf`). Remove
-   the link if you'd rather not share slides.
-3. **CV is self-hosted** at `/files/AtreyaDey_CV.pdf` (downloaded from your
-   Dropbox link on 20 July 2026) instead of linking Dropbox. Confirm this is
-   the current version; "Last updated: July 2026" on the CV page reflects the
-   download date, not necessarily the CV's own date.
-4. **Twitter/X** (`@atreyadey`, from the old Hugo site) was **not** carried
-   over — the current Google Site doesn't link it. Add it to
-   `src/data/profile.json` if you still use it. Same question for Bluesky.
+1. ~~Bird's-eye view draft PDF~~ **Resolved (20 Jul 2026): not linked.** The
+   draft PDF was removed from the site and from git history; the paper page
+   says the draft is available on request. When it's on SSRN, add
+   `ssrn: https://papers.ssrn.com/...` under `links:` in
+   `src/content/research/birds-eye-view.md`.
+2. ~~CERF 2026 slides~~ **Resolved (20 Jul 2026): not included.** Removed
+   from the site and git history.
+3. **CV hosting — awaiting Dropbox link from Atreya.** The CV is currently
+   self-hosted at `/files/AtreyaDey_CV.pdf`; once the Dropbox link is
+   provided, set it as `cv.file` in `src/data/profile.json` and delete the
+   local PDF.
+4. ~~Twitter/X~~ **Resolved (20 Jul 2026): not linked.**
 
 ## Facts to verify
 
