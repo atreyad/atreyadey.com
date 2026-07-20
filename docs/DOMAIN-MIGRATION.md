@@ -26,7 +26,7 @@
 
    ```bash
    cd atreyadey.com
-   git remote add origin https://github.com/atreyadey/atreyadey.com.git
+   git remote add origin https://github.com/atreyad/atreyadey.com.git
    git push -u origin main
    ```
 
@@ -34,7 +34,7 @@
    Actions.** The included workflow deploys on every push to `main`.
 
 3. Temporarily delete `public/CNAME` (or wait) and check the site at
-   `https://atreyadey.github.io/atreyadey.com/` — note that paths assume the
+   `https://atreyad.github.io/atreyadey.com/` — note that paths assume the
    custom domain, so styling may be off at the preview URL. This is expected;
    the site is built for `www.atreyadey.com`.
 
@@ -45,7 +45,7 @@ Advanced DNS). **Change only the records listed below.**
 
 | Action | Type | Host | Value |
 |---|---|---|---|
-| Edit (was `ghs.googlehosted.com`) | CNAME | `www` | `atreyadey.github.io` |
+| Edit (was `ghs.googlehosted.com`) | CNAME | `www` | `atreyad.github.io` |
 | Add | A | `@` | `185.199.108.153` |
 | Add | A | `@` | `185.199.109.153` |
 | Add | A | `@` | `185.199.110.153` |
