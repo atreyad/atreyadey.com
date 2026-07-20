@@ -35,7 +35,7 @@ media:
   - label: PRI interview
     url: https://www.youtube.com/watch?v=ZFzzNxLAWf4
 presentations:
-  - JFQA/Baruch Climate Finance Conference (poster, to be presented)
+  - JFQA/Baruch Climate Finance Conference (poster), 2025
   - CERF 25th Anniversary Conference, University of Cambridge, 2026
   - American Finance Association Poster Session, 2025
   - UNPRI Academic Conference, 2024
