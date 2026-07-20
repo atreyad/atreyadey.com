@@ -17,7 +17,7 @@
   --font-sans: 'Inter Variable', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   /* Layout */
-  --content-width: 46rem;
+  --content-width: 60rem;
   --space-section: 4rem;
 }
 
@@ -38,6 +38,19 @@ html {
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+}
+
+/* Scale the whole layout up on large monitors (everything is rem-based) */
+@media (min-width: 1500px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+@media (min-width: 1900px) {
+  html {
+    font-size: 118%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
