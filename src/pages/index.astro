@@ -6,6 +6,7 @@ import PaperEntry from '../components/PaperEntry.astro';
 import PaperLinks from '../components/PaperLinks.astro';
 import NewsList from '../components/NewsList.astro';
 import profile from '../data/profile.json';
+import highlights from '../data/highlights.json';
 import portrait from '../assets/portrait.jpg';
 
 const research = (await getCollection('research')).sort(
@@ -69,6 +70,41 @@ const personSchema = {
       densities={[1, 2]}
       loading="eager"
     />
+  </section>
+
+  <!-- Recent presentations and awards -->
+  <section class="section" aria-labelledby="highlights-heading">
+    <h2 class="section-heading" id="highlights-heading">
+      Recent presentations &amp; awards
+    </h2>
+    <div class="highlights">
+      <div>
+        <h3 class="highlights-subheading">Presentations</h3>
+        <ul class="highlights-list">
+          {
+            highlights.presentations.map((item) => (
+              <li>
+                <span class="highlights-year">{item.year}</span>
+                <span>{item.text}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="highlights-subheading">Awards</h3>
+        <ul class="highlights-list">
+          {
+            highlights.awards.map((item) => (
+              <li>
+                <span class="highlights-year">{item.year}</span>
+                <span>{item.text}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Featured paper -->
@@ -177,6 +213,51 @@ const personSchema = {
 
     .portrait {
       width: 10rem;
+    }
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .highlights-subheading {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .highlights-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.92rem;
+  }
+
+  .highlights-list li {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .highlights-list li:last-child {
+    border-bottom: none;
+  }
+
+  .highlights-year {
+    color: var(--muted);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 40em) {
+    .highlights {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
   }
 
