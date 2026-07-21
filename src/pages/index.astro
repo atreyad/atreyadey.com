@@ -50,6 +50,10 @@ const personSchema = {
         <a href={profile.affiliations[0].url}>Cambridge Judge Business School</a>
       </p>
       <p class="hero-statement" set:html={profile.bio} />
+      <p class="hero-interests">
+        <span class="hero-interests-label">Research interests:</span>
+        {profile.researchInterests.join(' · ')}
+      </p>
       <div class="hero-links">
         <a class="button button--solid" href="/research/">Research</a>
         <a class="button" href={profile.cv.file}>CV</a>
@@ -203,6 +207,17 @@ const personSchema = {
   .hero-statement {
     max-width: 40rem;
     margin: 0 0 1.5rem;
+  }
+
+  .hero-interests {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: -0.5rem 0 1.5rem;
+  }
+
+  .hero-interests-label {
+    font-weight: 600;
+    color: var(--text);
   }
 
   .hero-links {
