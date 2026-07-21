@@ -15,7 +15,10 @@ const isCurrent = (href: string) =>
 
 <header>
   <div class="inner">
-    <a class="wordmark" href="/">{profile.name}</a>
+    <a class="wordmark" href="/">
+      {profile.name}
+      <span class="wordmark-affil">| University of Cambridge</span>
+    </a>
     <nav aria-label="Main">
       <ul>
         {
@@ -66,6 +69,13 @@ const isCurrent = (href: string) =>
 
   .wordmark:hover {
     color: var(--accent);
+  }
+
+  .wordmark-affil {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--muted);
   }
 
   nav ul {
