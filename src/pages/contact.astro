@@ -17,10 +17,22 @@ import profile from '../data/profile.json';
       <dt>Email</dt>
       <dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd>
 
-      <dt>Affiliation</dt>
+      <dt>Affiliations</dt>
       <dd>
-        Cambridge Judge Business School, University of Cambridge<br />
-        Cambridge Endowment for Research in Finance · Trinity Hall
+        <ul class="affiliation-list">
+          <li>
+            <a href={profile.affiliations[0].url}>Cambridge Judge Business
+            School</a>, University of Cambridge
+          </li>
+          <li>
+            <a href={profile.affiliations[1].url}>Cambridge Endowment for
+            Research in Finance</a>
+          </li>
+          <li>
+            <a href={profile.affiliations[2].url}>Trinity Hall</a>, University
+            of Cambridge
+          </li>
+        </ul>
       </dd>
 
       <dt>Profiles</dt>
@@ -53,6 +65,16 @@ import profile from '../data/profile.json';
 
   .contact-list dd {
     margin: 0.2rem 0 0;
+  }
+
+  .affiliation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .affiliation-list li {
+    padding: 0.15rem 0;
   }
 
   .section .meta {
