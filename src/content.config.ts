@@ -56,31 +56,4 @@ const research = defineCollection({
     }),
 });
 
-/**
- * News items. Add one by creating a new .md file in src/content/news/.
- * The latest items automatically appear on the homepage.
- */
-const news = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
-  schema: z.object({
-    date: z.coerce.date(),
-    // Set true when only the month/season is known; the day is then not shown
-    approximate: z.boolean().default(false),
-    title: z.string(),
-    category: z
-      .enum([
-        'Award',
-        'Paper',
-        'Presentation',
-        'Media',
-        'Appointment',
-        'Milestone',
-        'Other',
-      ])
-      .default('Other'),
-    link: z.string().optional(),
-    linkLabel: z.string().optional(),
-  }),
-});
-
-export const collections = { research, news };
+export const collections = { research };

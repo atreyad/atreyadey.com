@@ -42,25 +42,12 @@ Frontmatter fields (see existing files for examples):
 The Markdown body below the frontmatter is the "Overview" section of the
 paper's own page.
 
-### Add a news item
+### Update presentations and awards
 
-Create a Markdown file in `src/content/news/`, e.g.
-`2026-09-my-item.md`:
-
-```markdown
----
-date: 2026-09-15
-approximate: false   # set true if only the month is certain (hides the day)
-title: >-
-  Presented "Paper title" at Conference X.
-category: Presentation   # Award | Paper | Presentation | Media | Appointment | Milestone | Other
-link: https://example.org     # optional
-linkLabel: Slides             # optional, defaults to "Link"
----
-```
-
-The six most recent items appear on the homepage automatically; all items
-appear on `/news/` grouped by year.
+Edit `src/data/highlights.json` — each entry is `{"year": "...", "text":
+"..."}` and items appear in the order listed. (The site had a dated news
+system early on; it was removed in July 2026 — see git history if it's
+ever wanted back.)
 
 ### Update the CV
 

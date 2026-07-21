@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PaperEntry from '../components/PaperEntry.astro';
 import PaperLinks from '../components/PaperLinks.astro';
-import NewsList from '../components/NewsList.astro';
 import profile from '../data/profile.json';
 import highlights from '../data/highlights.json';
 import portrait from '../assets/portrait.jpg';
@@ -14,10 +13,6 @@ const research = (await getCollection('research')).sort(
 );
 const featured = research.find((p) => p.data.featured);
 const selected = research.filter((p) => !p.data.featured && p.data.selected);
-
-const news = (await getCollection('news'))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 6);
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -162,11 +157,23 @@ const personSchema = {
     <p class="more-link"><a href="/research/">All research →</a></p>
   </section>
 
-  <!-- News -->
-  <section class="section" aria-labelledby="news-heading">
-    <h2 class="section-heading" id="news-heading">News</h2>
-    <NewsList items={news} />
-    <p class="more-link"><a href="/news/">All news →</a></p>
+  <!-- Media -->
+  <section class="section" aria-labelledby="media-heading" id="media">
+    <h2 class="section-heading" id="media-heading">Media</h2>
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/ZFzzNxLAWf4"
+        title="PRI interview: Atreya Dey discusses rising seas and sovereign credit risk with Tom Gosling"
+        loading="lazy"
+        allowfullscreen
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </div>
+    <p class="meta video-caption">
+      Discussing "<a href="/research/rising-seas/">Inattention to the coming
+      storm?</a>" with Tom Gosling (London Business School) after receiving
+      the Best PhD Paper Award at the PRI Academic Network Conference 2024.
+    </p>
   </section>
 
 </Base>
@@ -214,6 +221,27 @@ const personSchema = {
     .portrait {
       width: 10rem;
     }
+  }
+
+  .video-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video-caption {
+    margin-top: 0.75rem;
   }
 
   .highlights {

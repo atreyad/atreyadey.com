@@ -10,7 +10,8 @@ export default defineConfig({
   // Old Google Sites URLs → new locations
   redirects: {
     '/bio': '/#about',
-    '/interviews-media': '/news',
+    '/interviews-media': '/#media',
+    '/news': '/',
     '/home': '/',
   },
 });
