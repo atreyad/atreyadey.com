@@ -46,6 +46,13 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <meta name="twitter:card" content="summary_large_image" />
 
     <slot name="head" />
+
+    {/* Privacy-friendly, cookie-free analytics (GoatCounter) */}
+    <script
+      is:inline
+      data-goatcounter="https://atreyad.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
