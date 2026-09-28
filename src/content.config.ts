@@ -26,6 +26,9 @@ const research = defineCollection({
     order: z.number().default(99),
     // Set false to hide from the homepage "Selected research" list
     selected: z.boolean().default(true),
+    // Set true to take a paper off the site entirely (no page, not listed
+    // anywhere) while keeping this file for later
+    hidden: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
     // Two–three sentence non-technical summary (shown by default)
     summary: z.string(),

@@ -31,6 +31,8 @@ Frontmatter fields (see existing files for examples):
   e.g. `"Draft: July 2026"`)
 - `selected: false` hides a paper from the homepage list (it stays on the
   Research page); `order` controls sort order (lower = higher)
+- `hidden: true` takes a paper off the site entirely (no page, not listed
+  anywhere) while keeping the file for later
 - `summary` (short, always visible), `abstract` (behind a toggle)
 - `links`: any of `paper`, `ssrn`, `slides`, `appendix`, `code`, `data`
 - `awards`, `presentations` (lists), `media` (list of `{label, url}`)

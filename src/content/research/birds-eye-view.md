@@ -5,6 +5,7 @@ authors:
 status: Working paper
 version: "Job market paper · Draft: July 2026"
 order: 1
+hidden: true
 tags:
   - Biodiversity
   - Asset Pricing

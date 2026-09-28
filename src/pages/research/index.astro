@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PaperEntry from '../../components/PaperEntry.astro';
 
-const all = (await getCollection('research')).sort(
+const all = (await getCollection('research', (p) => !p.data.hidden)).sort(
   (a, b) => a.data.order - b.data.order
 );
 

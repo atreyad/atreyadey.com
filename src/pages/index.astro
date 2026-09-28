@@ -7,7 +7,7 @@ import profile from '../data/profile.json';
 import highlights from '../data/highlights.json';
 import portrait from '../assets/portrait.jpg';
 
-const research = (await getCollection('research')).sort(
+const research = (await getCollection('research', (p) => !p.data.hidden)).sort(
   (a, b) => a.data.order - b.data.order
 );
 const selected = research.filter((p) => p.data.selected);
