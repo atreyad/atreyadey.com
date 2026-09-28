@@ -8,7 +8,7 @@ authors:
     affiliation: London School of Economics
 status: Working paper
 version: "Last revised: May 2026"
-order: 3
+order: 1
 tags:
   - Climate Finance
   - Asset Pricing
