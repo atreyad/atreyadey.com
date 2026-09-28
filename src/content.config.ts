@@ -22,8 +22,6 @@ const research = defineCollection({
     status: z.string(),
     // Free-text version note shown next to the status, e.g. "Draft: July 2026"
     version: z.string().optional(),
-    // Featured paper appears in the large homepage block
-    featured: z.boolean().default(false),
     // Lower numbers appear first within their section
     order: z.number().default(99),
     // Set false to hide from the homepage "Selected research" list

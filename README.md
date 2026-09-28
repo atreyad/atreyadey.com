@@ -29,8 +29,6 @@ Frontmatter fields (see existing files for examples):
 - `title`, `authors` (list of `{name, url?, affiliation?}`), `status`
   (`Working paper`, `Work in progress`, `Published`, …), `version` (free text,
   e.g. `"Draft: July 2026"`)
-- `featured: true` puts the paper in the large homepage block (only one paper
-  should be featured at a time)
 - `selected: false` hides a paper from the homepage list (it stays on the
   Research page); `order` controls sort order (lower = higher)
 - `summary` (short, always visible), `abstract` (behind a toggle)

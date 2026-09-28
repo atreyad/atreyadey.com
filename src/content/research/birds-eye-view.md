@@ -4,7 +4,6 @@ authors:
   - name: Atreya Dey
 status: Working paper
 version: "Job market paper · Draft: July 2026"
-featured: true
 order: 1
 tags:
   - Biodiversity

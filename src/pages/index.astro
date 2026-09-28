@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PaperEntry from '../components/PaperEntry.astro';
-import PaperLinks from '../components/PaperLinks.astro';
 import profile from '../data/profile.json';
 import highlights from '../data/highlights.json';
 import portrait from '../assets/portrait.jpg';
@@ -11,8 +10,7 @@ import portrait from '../assets/portrait.jpg';
 const research = (await getCollection('research')).sort(
   (a, b) => a.data.order - b.data.order
 );
-const featured = research.find((p) => p.data.featured);
-const selected = research.filter((p) => !p.data.featured && p.data.selected);
+const selected = research.filter((p) => p.data.selected);
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -112,54 +110,6 @@ const personSchema = {
       </div>
     </div>
   </section>
-
-  <!-- Featured paper -->
-  {
-    featured && (
-      <section class="section" aria-labelledby="featured-heading">
-        <h2 class="section-heading" id="featured-heading">
-          Featured research
-        </h2>
-        <article class="featured">
-          <div class="featured-body">
-            <h3 class="featured-title">
-              <a href={`/research/${featured.id}/`}>{featured.data.title}</a>
-            </h3>
-            <p class="meta">
-              {featured.data.status}
-              {featured.data.version && ` · ${featured.data.version}`}
-            </p>
-            <p>{featured.data.summary}</p>
-            {featured.data.awards.map((award) => (
-              <p class="award">{award}</p>
-            ))}
-            <PaperLinks entry={featured} detailsLink={true} />
-            {featured.data.abstract && (
-              <details class="abstract">
-                <summary>Abstract</summary>
-                <p>{featured.data.abstract}</p>
-              </details>
-            )}
-          </div>
-          {featured.data.image && (
-            <figure class="featured-figure">
-              <a href={`/research/${featured.id}/`}>
-                <Image
-                  src={featured.data.image}
-                  alt={featured.data.imageAlt ?? ''}
-                  width={900}
-                  loading="eager"
-                />
-              </a>
-              {featured.data.imageCaption && (
-                <figcaption>{featured.data.imageCaption}</figcaption>
-              )}
-            </figure>
-          )}
-        </article>
-      </section>
-    )
-  }
 
   <!-- Selected research -->
   <section class="section" aria-labelledby="research-heading">
@@ -319,64 +269,6 @@ const personSchema = {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
-  }
-
-  .featured {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 38%;
-    gap: 1.5rem;
-    align-items: center;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: #fff;
-    padding: 1.4rem 1.5rem 1.6rem;
-  }
-
-  .featured-figure {
-    margin: 0;
-    min-width: 0;
-  }
-
-  .featured-figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .featured-figure figcaption {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 0.6rem;
-    line-height: 1.45;
-  }
-
-  .featured-body {
-    min-width: 0;
-  }
-
-  @media (max-width: 48em) {
-    .featured {
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-  }
-
-  .featured-title {
-    font-size: 1.45rem;
-    margin: 0 0 0.3rem;
-  }
-
-  .featured-title a {
-    color: var(--text);
-    text-decoration: none;
-  }
-
-  .featured-title a:hover {
-    color: var(--accent);
-  }
-
-  .featured-body > p {
-    margin: 0.6rem 0 0;
   }
 
   .more-link {
