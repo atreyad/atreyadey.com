@@ -4,7 +4,7 @@ authors:
   - name: Atreya Dey
 status: Working paper
 version: "Last revised: February 2025"
-order: 2
+order: 3
 tags:
   - Climate Finance
   - Sovereign Risk

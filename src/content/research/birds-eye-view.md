@@ -1,33 +1,36 @@
 ---
-title: "A bird's-eye view: firm biodiversity footprints and earnings expectations"
+title: "A bird's-eye view: firm costs and the limits of habitat protection"
 authors:
   - name: Atreya Dey
 status: Working paper
-version: "Job market paper · Draft: July 2026"
-order: 3
-hidden: true
+version: "Job market paper · Draft: October 2026"
+order: 1
 tags:
   - Biodiversity
-  - Asset Pricing
+  - Environmental Regulation
   - Geospatial Data
 summary: >-
   Using bird-watching data matched to U.S. industrial facilities, I show that
-  facility construction causally reduces local bird populations and species,
-  and I build a firm-level biodiversity footprint index from these estimates.
-  Firms with large footprints face persistently higher production costs, which
-  investors initially misread as operational decline. The resulting pessimism
-  corrects around earnings announcements, generating predictable returns.
+  new facilities reduce bird populations up to 18 km away. Yet under the
+  Endangered Species Act, firms bear higher operating costs only when a
+  facility sits within about 3 km of protected habitat. Protection only
+  partly reverses the damage, and corporate disclosures and biodiversity
+  ratings reveal little about which firms are exposed.
 abstract: >-
-  Using bird-watching data matched to U.S. industrial facilities, I show that
-  firms causally reduce bird populations and species. I use these estimates to
-  construct a firm-level biodiversity footprint index that identifies firms
-  with many ecologically consequential facilities relative to their size.
-  Sorting on the footprint generates significant abnormal returns among small-
-  and mid-cap firms from 1988 to 2024. The return premium reflects forecast
-  errors: investors misinterpret the higher production costs of high-footprint
-  firms as operational decline, and their pessimism corrects when earnings are
-  announced. Although firms' facility locations are public, firms with larger
-  biodiversity footprints provide less voluntary biodiversity information.
+  The U.S. Endangered Species Act protects the habitats of threatened species
+  by designating spatially explicit areas that restrict the operations of
+  nearby firms. Using geographic designations under the Act, I show that these
+  protections are associated with greater operating costs and lower
+  profitability for firms with facilities only within a few kilometers of the
+  area. However, I provide causal evidence that these facilities reduce bird
+  populations—a proxy for local ecology—over a much wider area, with effects
+  detected up to 18 km away. Protections do not undo the damage, as bird
+  populations near designated habitat recover only partially. Costs rise with
+  the concentration of polluting activity near protected habitat and coincide
+  with greater regulatory scrutiny, increased employment, and reductions in
+  the most toxic pollutants. In addition, voluntary disclosures and
+  biodiversity ratings provide little information about this exposure,
+  limiting the scope for market-based incentives to reduce ecological harm.
 links: {}
 awards:
   - >-
@@ -37,42 +40,61 @@ presentations:
   - NBER Climate Finance Conference, Cambridge MA, October 2026 (upcoming)
   - FMA Annual Meeting, Tampa, October 2026 (upcoming)
   - Cambridge Judge Business School seminar, October 2026 (upcoming)
-  - Aarhus Finance Forum, August 2026 (upcoming)
+  - Aarhus Finance Forum, August 2026
   - International Symposium on Climate, Finance, and Sustainability, Paris, June 2026
   - 3rd Workshop on Recent Trends and New Developments in Sustainable, Green & International Finance (EDHEC Nice), June 2026
+  - Climate Finance & Business Conference, Concordia University
+  - Modern Finance Conference
+  - University of Ljubljana
   - Cambridge Judge Business School Brown Bag Seminar
   - 2nd Financial Fraud, Misconduct and Market Manipulation Conference (Lancaster University), September 2025
   - 26th BIOECON Annual Conference, St John's College, Cambridge, September 2025
   - Global Research Alliance for Sustainable Finance and Investment, August 2025
   - Sustainable and Impact Investments International Conference, Dublin, January 2025
-image: ../../assets/birdseye-map.png
+image: ../../assets/birdseye-habitat.png
 imageAlt: >-
-  Map of the contiguous United States. Counties are shaded blue by average
-  bird abundance per eBird checklist, and black points mark the locations of
-  thousands of industrial facilities, which cluster densely in the eastern
-  half of the country.
+  Map of the contiguous United States. Designated critical habitat is shaded
+  blue, with fish habitat in orange concentrated in the Pacific Northwest,
+  California, and southeastern rivers. Black points mark industrial facilities
+  within 30 km of designated habitat, clustered around the Great Lakes, the
+  Northeast corridor, and the Southeast.
 imageCaption: >-
-  County-level bird abundance from eBird checklists (2010–2024), with the
-  locations of Toxics Release Inventory facilities in black. Figure 1 of the
-  paper.
+  Endangered Species Act critical habitat and the Toxics Release Inventory
+  facilities within 30 km of it (black). Blue areas are U.S. Fish and Wildlife
+  Service habitat; orange areas and lines are National Marine Fisheries Service
+  habitat for salmon, steelhead, eulachon, and sturgeon. Figure 2 of the paper.
 ---
 
 The current draft is available on request — please
 [email me](mailto:a.dey@jbs.cam.ac.uk).
 
-This paper builds a standardized measure of firms' ecological impact — a
-biodiversity footprint index — from millions of citizen-science bird
-observations, satellite-inferred facility construction dates, and facility
-locations in the EPA's Toxics Release Inventory. Difference-in-differences
-estimates show that constructing an industrial facility reduces nearby bird
-abundance by 6–9% and species richness by 3–5%.
+The U.S. Endangered Species Act protects threatened species by designating
+critical habitat: mapped areas whose protections reach private firms through
+federal permits and project approvals, including for activities outside the
+boundary that may affect the habitat within it. This paper asks how far the
+ecological effects of industrial facilities extend, and what habitat
+protection costs the firms that operate nearby.
 
-The index then links this ecological damage to financial outcomes: firms with
-large footprints have persistently higher production costs that investors
-initially interpret as operational decline. Forecast errors correct around
-earnings announcements, producing abnormal returns among small- and mid-cap
-firms. Despite facility locations being public information, high-footprint
-firms disclose less voluntary biodiversity information.
+To measure ecological reach, I combine facility locations from the EPA's
+Toxics Release Inventory with millions of citizen-science bird observations
+from eBird and construction dates inferred from satellite imagery.
+Difference-in-differences estimates show that within 18 km of a new facility,
+bird abundance falls by 6–9% and species richness by 3–5%. The declines begin
+at construction and persist.
+
+The costs of protection are far more local. When critical habitat is
+designated within 3 km of a firm's facility, its cost of goods sold rises by
+1.53 percentage points of sales, about $31 million a year for the median
+firm, and its operating margin falls by 1.81 points. Protected-area
+designations that carry no new obligations have no such effect. Costs rise
+most for firms with more of their pollution near the habitat, especially
+highly leveraged ones, and designation brings more enforcement and a shift
+toward less toxic chemicals.
+
+This spatial mismatch limits what protection achieves: bird populations near
+designated habitat recover only partially. Voluntary ESG reports, 10-K
+filings, and biodiversity footprint scores largely fail to identify the
+exposed firms, which limits the scope for investors to complement regulation.
 
 An earlier version of this work circulated as
 ["Firm operations, biodiversity loss, and corporate
