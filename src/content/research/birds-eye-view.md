@@ -33,6 +33,7 @@ abstract: >-
   limiting the scope for market-based incentives to reduce ecological harm.
 links: {}
 awards:
+  - Best Paper Award, 3rd Modern Finance Conference, Kraków 2026
   - >-
     Best PhD Paper Award, Global Research Alliance for Sustainable Finance and
     Investment 2025 (for an earlier version)
@@ -40,11 +41,11 @@ presentations:
   - NBER Climate Finance Conference, Cambridge MA, October 2026 (upcoming)
   - FMA Annual Meeting, Tampa, October 2026 (upcoming)
   - Cambridge Judge Business School seminar, October 2026 (upcoming)
+  - 3rd Modern Finance Conference, Kraków, September 2026
   - Aarhus Finance Forum, August 2026
   - International Symposium on Climate, Finance, and Sustainability, Paris, June 2026
   - 3rd Workshop on Recent Trends and New Developments in Sustainable, Green & International Finance (EDHEC Nice), June 2026
   - Climate Finance & Business Conference, Concordia University
-  - Modern Finance Conference
   - University of Ljubljana
   - Cambridge Judge Business School Brown Bag Seminar
   - 2nd Financial Fraud, Misconduct and Market Manipulation Conference (Lancaster University), September 2025

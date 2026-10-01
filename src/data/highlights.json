@@ -3,6 +3,7 @@
     { "year": "Oct 2026", "text": "NBER Climate Finance Conference, Cambridge MA (upcoming)" },
     { "year": "Oct 2026", "text": "FMA Annual Meeting, Tampa (upcoming)" },
     { "year": "Oct 2026", "text": "Cambridge Judge Business School seminar (upcoming)" },
+    { "year": "Sep 2026", "text": "Modern Finance Conference, Kraków" },
     { "year": "Aug 2026", "text": "Aarhus Finance Forum" },
     { "year": "Jun 2026", "text": "International Symposium on Climate, Finance, and Sustainability, Paris" },
     { "year": "Jun 2026", "text": "Workshop on Sustainable, Green & International Finance, EDHEC Nice" },
@@ -14,6 +15,7 @@
     { "year": "Jan 2025", "text": "American Finance Association poster session, San Francisco" }
   ],
   "awards": [
+    { "year": "2026", "text": "Best Paper Award, Modern Finance Conference" },
     { "year": "2025", "text": "Best PhD Paper Award, Global Research Alliance for Sustainable Finance and Investment" },
     { "year": "2024", "text": "Best PhD Paper Award, PRI Academic Network Conference" },
     { "year": "2023, 2025", "text": "American Finance Association Travel Grants" },
